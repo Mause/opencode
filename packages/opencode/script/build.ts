@@ -55,6 +55,12 @@ const allTargets: {
     avx2: false,
   },
   {
+    os: "linux",
+    arch: "arm64",
+    abi: "android",
+    avx2: false,
+  },
+  {
     os: "darwin",
     arch: "arm64",
   },
@@ -80,7 +86,7 @@ const allTargets: {
 
 const targets = singleFlag
   ? allTargets.filter((item) => {
-      if (item.os !== process.platform || item.arch !== process.arch) {
+      if (item.os !== process.platform) {
         return false
       }
 
