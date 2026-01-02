@@ -86,7 +86,7 @@ const allTargets: {
 
 const targets = singleFlag
   ? allTargets.filter((item) => {
-      if (item.os !== process.platform || item.arch !== process.arch) {
+      if (item.os !== process.platform) {
         return false
       }
 
